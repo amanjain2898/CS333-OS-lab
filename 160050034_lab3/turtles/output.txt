@@ -1,0 +1,48 @@
+
+
+
+Commands          																				Output
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+clear																			Clears the terminal
+mkdir test
+ls																				a.out  output.txt  report.txt  test  turtle.c
+cd test																
+pwd																				/home/aman/Desktop/Sem-5/CS-333/160050034_lab3/turtles/test
+cd ..
+pwd																				/home/aman/Desktop/Sem-5/CS-333/160050034_lab3/turtles
+rm test																			rm: cannot remove 'test': Is a directory
+rmdir test
+ls																				a.out  output.txt  report.txt  turtle.c
+sleep 5			
+echo "hello"																	"hello"
+echo "hello" > hello.txt 											
+cat hello.txt 																	"hello"
+cd hello.txt 																	Unable to open directory
+cat hi.text																		cat: hi.txt: No such file or directory
+
+sleep 5 ;; cat hello.txt ;; sleep 1 ;; echo "hi" ;; ls							"hello"
+																				"hi"
+																				a.out  hello.txt  output.txt  report.txt  turtle.c
+
+cat hi.txt ;; echo "You know nothing Jon Snow"									cat: hi.txt: No such file or directory
+																				"You know nothing Jon Snow"
+
+cd asyga																		Unable to open directory
+echo "Hello World" > abc.txt
+cp abc.txt def.txt
+cat def.txt 																	"Hello World"
+cat abc.txt > xyz.txt 
+sleep 1 ;; echo "Hello" ;; sleep 2 ;; cat abc.txt ;; sleep 3 ;; ls -l  			"Hello"
+																				"Hello World"
+																				total 44
+																				-rw-rw-r-- 1 aman aman    14 Jul 30 22:47 abc.txt
+																				-rwxrwxr-x 1 aman aman 13752 Jul 30 22:37 a.out
+																				-rw-rw-r-- 1 aman aman    14 Jul 30 22:47 def.txt
+																				-rw-rw-r-- 1 aman aman     8 Jul 30 22:44 hello.txt
+																				-rw-rw-r-- 1 aman aman   317 Jul 30 22:41 output.txt
+																				-rw-rw-r-- 1 aman aman  1699 Jul 30 22:37 report.txt
+																				-rw-rw-r-- 1 aman aman  4657 Jul 30 22:24 turtle.c
+
+

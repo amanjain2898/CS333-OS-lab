@@ -1,0 +1,86 @@
+Lab 1
+------------------------------------------------
+* If you are running this program in SL2(Student Lab 2) machines 
+  login with userid labuser or you can run this program on a 
+  machine with the local disk. Eg: Your laptop.
+
+* lab1.pdf describes the lab statement.
+
+Exercise 1:
+	(a) No of cpu's : 4, No of sockets : 1, No of cores: 4
+	(b) 1603.125, 1599.960, 1599.960, 1602.070 Mhz
+	(c) 8073332 kB
+	(d) MemFree:         4892308 kB
+	    MemAvailable:    6018492 kB
+
+	    Free memory is the memory the machine has access to. While available memory is free memory+cache memory ( memory which 		    can be used for other processes). Available memory is all the memory that can be used by the system.
+
+	(e) 211 total processes (cmd : ps aux | wc -l)
+	      2 avahi
+	      1 colord
+	     84 labuser
+	      1 lp
+	      1 message+
+	      1 nobody
+	      1 nslcd
+	      7 postgres
+	    109 root
+	      1 rtkit
+	      1 syslog
+	      1 systemd+
+	      1 whoopsie
+
+	(f) 40449465 (in /proc/stat/ ctxt field)
+	(g) One of the files is 128 TB and one is 11 B and the rest are zeroes.
+	    
+	    How can a file larger than the memory of machine exist?
+	
+	
+Exercise 2:
+
+    memory_1 : VmSize : 8140 kB, VmRSS : 652 kB
+    memory_2 : VmSize : 12048 kB, VmRSS : 628 kB
+    memory_3 : VmSize : 8136 kB, VmRSS : 3140 kB
+    memory_4 : VmSize : 8140 kB, VmRSS : 4944 kB
+
+    VmRSS is the measure of how much RAM the process is actually using. VmSize includes RSS, plus things like shared libraries 	        and memory mapped files (which don't actually use RAM), as well as allocated, but unused, memory.
+
+Exercise 3:
+
+    3 SUBPROCESSES.
+    Found by "pstree | grep 'subprocess'"
+
+Exercise 4:
+
+    On running "strace ./empty" 11 different system calls. The total number of calls is 25.
+    
+    (a)  Common parts are read,open,close,fstat,mmap,mprotect,munmap,brk,access,execve,arch_prctl
+         while write,lseek are specific to the second command.
+    (b)  Calls for "strace ./empty" : read,open,close, fstat,mmap,mprotect,munmap,brk,access,execve,arch_prctl
+         Calls for "strace ./hello" : read, write, open, close,fstat,lseek,mmap,mprotect,munmap,brk,access, getpid,execve,arch_prctl
+
+
+
+Exercise 5:
+
+    11 files are opened found by "lsof | grep 'openfile' | wc -l"
+
+Exercise 6: Found by running "lsblk"
+
+    NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+    sda      8:0    0 59.6G  0 disk 
+    |-sda1   8:1    0 58.7G  0 part /
+    |-sda2   8:2    0    1K  0 part 
+    `-sda5   8:5    0  975M  0 part [SWAP]
+
+    Found by "lsblk -f" : In sda1 : ext4 and in sda5:swap.
+
+	
+Exercise 7:
+
+    The first program cannot find a bootable disk since we have written only 510 bytes while in case of the second program we have also added the last two bytes which makes it realise that our disk is bootable(as it is same as magic number) and hence our program boots as shown by qemu output.
+
+Exercise 8:
+
+
+    

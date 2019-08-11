@@ -1,0 +1,7 @@
+
+Whenever the sleep time of grandchild is less than the sleep time of child the two processes are exited simultaneously. There is no difference in the time of exit
+of both processes since the sleep of child is interrupted when the grandchild exits.
+
+whereas
+
+Whenever the sleep time of grandchild is less than the sleep time of the grandchild the child function eixts and the grandchild becomes orphan process which is then adopted by "init" and hence when it exits the default handler does not print the exit statement.

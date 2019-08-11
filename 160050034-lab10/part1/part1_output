@@ -1,0 +1,49 @@
+$ sigtest1
+[3] Parent waits for 5 seconds 
+[3] Parent sends signal to child 
+Signal handler invoked !!!. signal type: 1 
+$ sigtest2
+
+[5] Parent sends first signal to child 
+Child: Signal handler invoked !!!. signal type: 5 
+
+[5] Parent sends second signal to child 
+Child: Signal handler invoked !!!. signal type: 1 
+$ sigtest3
+Child: 0  
+Child: 0  
+Child: 0  
+Child: 0  
+
+[7] Parent sends signal '5' to child 
+Child: Signal handler invoked !!!. signal type: 5 
+Child: 1  
+Child: 0  
+Child: 0  
+Child: 0  
+Child: 0  
+
+[7] Parent sends signal '6' to child 
+Child: Signal handler invoked !!!. signal type: 6 
+Child: 1  
+Child: 0  
+Child: 0  
+Child: 0  
+Child: 0  
+
+[9] Parent sends signal '1' to child 
+Child: Signal handler invoked !!!. signal type: 1 
+$ sigtest4
+Signal handler invoked !!!. signal type: 5 
+Signal handler invoked !!!. signal type: 10 
+Signal handler invoked !!!. signal type: 1 
+$ sigtest5
+ 
+Signal handler 1 invoked !!!. signal type: 5 
+Signal handler 2 invoked !!!. signal type: 6 
+ 
+Signal handler 1 invoked !!!. signal type: 10 
+Signal handler 2 invoked !!!. signal type: 11 
+ 
+Signal handler 1 invoked !!!. signal type: 1 
+Signal handler 2 invoked !!!. signal type: 1 

@@ -1,0 +1,19 @@
+
+REPORT ASSIGNMENT 3
+
+CS 333 : OPERATING SYSTEMS LAB
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+I built the shell by parsing the input lines and then checking the tokens (space seperated parts of the line) for various corner cases as well as correctness of commands.
+First, we use a infinite true loop in the main() function so that our terminal is ready for the next command as soon as it executes one command.
+Second, a recursive function lsh_launch(char**,int) is created which is called every time from the main funciton.
+		Now inside the lsh_launch function, we first return the base case where if null char is passed as argument or a command ending with ";;" is present we return the function with value 1
+
+		"cd" command is handled seperately. We check whether directory exists or not with "chdir()" command. Also various other corner cases are handled which are: "cd ;; __" , "cd dir1 dir2 ....  ;; cmd2" etc.
+
+		"exit" command is also handled as a seperate case.
+
+		Output redirector ">" symbol is checked for in the token array and if present we seperate the token in two halves. The first one assuming to be command and the second half to be fileName. execvp() call is used to execute the bash functions from child process created by fork().
+
+		General bash terminal commands are handled pretty well by execvp function call which returns error if the syntax of command is not right. And since the function is recursive so the part to the right of ";;" is again called as an argument of the function which also ensures the sequentiality of the execution of processes.

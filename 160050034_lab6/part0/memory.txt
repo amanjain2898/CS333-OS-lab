@@ -1,0 +1,14 @@
+
+1) 3177 r->next = kmem.freelist;
+   ---- add the page to the freelist
+   3178 kmem.freelist = r;
+   ---- The root pointer is changed to point to this so that the page is at the top of all the free pages in freelist 
+
+2)  1740 pde = &pgdir[PDX(va)];
+	----  pde points to the physical address of the page-table entry in the pgdir
+
+	1742 pgtab = (pte_t*)p2v(PTE_ADDR(*pde));
+	---- virtual address of the page is then stored in pgtab
+
+	1753 return &pgtab[PTX(va)];
+	---- return the pointer to the physical address of the actual page we want to access where ptx is extracting the second 10 bits corresponding to page table 	 entry

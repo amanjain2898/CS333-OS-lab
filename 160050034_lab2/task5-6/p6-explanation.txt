@@ -1,0 +1,21 @@
+
+------------------------------
+
+PID    STAT
+26025  S+
+
+This is the output before the keyboard interrupt which indicated Interruptible sleep (i.e. the process is still waiting for an event to complete) and
+represented by "S+"
+
+
+---------------------------
+whereas
+---------------------------
+
+PID    STAT
+26025  Z+
+
+This is the output after the keyboard interruption which leads to termination of child process but the parent is still running so the process becomes zombie
+process and represented by "Z+"
+
+------------------------------

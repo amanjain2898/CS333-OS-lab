@@ -1,0 +1,458 @@
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+TESTCASE 0
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+[testcase0.img] Disk opened 
+[testcase0.img] File system found. fs_number: 0 
+[testcase0.img] Disk successfully mounted 
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+0            testcase0.img        3               0          emufs non-encrypted 
+
+[testcase0.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt    2048 	[2 5 6 7] 	Mon Oct 29 11:06:39 2018
+file2.txt    1024 	[3 4 -1 -1] 	Mon Oct 29 11:06:39 2018
+-----------------------------------------------------------------
+
+File opened
+File opened
+
+<file1.txt> Current offset: 0. Reading 512 bytes 
+Data = [This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--------------------------------------END] 
+<file1.txt> Reading completed. Number of bytes read: 512. Current offset: 512 
+
+<file2.txt> Current offset: 0. Reading 1024 bytes 
+Data = [This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---Reached the end of 1024 bytes--END] 
+<file2.txt> Reading completed. Number of bytes read: 1024. Current offset: 1024 
+
+<file1.txt> Current offset: 512. Reading 1536 bytes 
+Data = [This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes-----Reached the end-----END] 
+<file1.txt> Reading completed. Number of bytes read: 1536. Current offset: 2048 
+
+[testcase0.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt    2048 	[2 5 6 7] 	Mon Oct 29 11:06:39 2018
+file2.txt    1024 	[3 4 -1 -1] 	Mon Oct 29 11:06:39 2018
+-----------------------------------------------------------------
+
+[testcase0.img] Device closed 
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+TESTCASE 1
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+[testcase1.img] Creating the disk image 
+[testcase1.img] Disk image is successfully creatd 
+[testcase1.img] Disk successfully mounted 
+File system created.
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+0            testcase1.img        3               0          emufs non-encrypted 
+
+[testcase1.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+-----------------------------------------------------------------
+
+File opened
+File opened
+
+<file1.txt> Current offset: 0. Writing 512 bytes 
+<file1.txt> Writing completed. Number of bytes wrtitten: 512. Current offset: 512 
+
+<file1.txt> Offset is set to 0 
+
+<file1.txt> Current offset: 0. Reading 512 bytes 
+Data = [This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--------------------------------------END] 
+<file1.txt> Reading completed. Number of bytes read: 512. Current offset: 512 
+asda
+
+<file2.txt> Current offset: 0. Writing 1024 bytes 
+<file2.txt> Writing completed. Number of bytes wrtitten: 1024. Current offset: 1024 
+
+<file2.txt> Offset is set to 0 
+
+<file2.txt> Current offset: 0. Reading 1024 bytes 
+Data = [This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---Reached the end of 1024 bytes--END] 
+<file2.txt> Reading completed. Number of bytes read: 1024. Current offset: 1024 
+
+[testcase1.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt     512 	[2 -1 -1 -1] 	Mon Oct 29 22:46:48 2018
+file2.txt    1024 	[3 4 -1 -1] 	Mon Oct 29 22:46:48 2018
+-----------------------------------------------------------------
+
+<file1.txt> Current offset: 512. Writing 1536 bytes 
+<file1.txt> Writing completed. Number of bytes wrtitten: 1536. Current offset: 2048 
+
+<file1.txt> Offset is set to 512 
+
+<file1.txt> Current offset: 512. Reading 1536 bytes 
+Data = [This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes-----Reached the end-----END] 
+<file1.txt> Reading completed. Number of bytes read: 1536. Current offset: 2048 
+
+[testcase1.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt    2048 	[2 5 6 7] 	Mon Oct 29 22:46:48 2018
+file2.txt    1024 	[3 4 -1 -1] 	Mon Oct 29 22:46:48 2018
+-----------------------------------------------------------------
+
+[testcase1.img] Device closed 
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+TESTCASE 2
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+[testcase2.img] Creating the disk image 
+[testcase2.img] Disk image is successfully creatd 
+[testcase2.img] Disk successfully mounted 
+File system created.
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+0            testcase2.img        3               0          emufs non-encrypted 
+
+[testcase2.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+ 
+File opened
+File opened
+
+<file1.txt> Current offset: 0. Writing 512 bytes 
+<file1.txt> Writing completed. Number of bytes wrtitten: 512. Current offset: 512 
+
+<file2.txt> Current offset: 0. Writing 1536 bytes 
+<file2.txt> Writing completed. Number of bytes wrtitten: 1536. Current offset: 1536 
+
+<file1.txt> Current offset: 512. Writing 1536 bytes 
+<file1.txt> Writing completed. Number of bytes wrtitten: 1536. Current offset: 2048 
+
+<file2.txt> Current offset: 1536. Writing 1024 bytes 
+<file2.txt> Writing completed. Number of bytes wrtitten: -1. Current offset: 1536 
+
+File closed
+File closed
+
+[testcase2.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt    2048 	[2 6 7 8] 	Mon Oct 29 22:46:55 2018
+file2.txt    1536 	[3 4 5 -1] 	Mon Oct 29 22:46:55 2018
+-----------------------------------------------------------------
+
+[testcase2.img] Device closed 
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+
+......................... Reopening device ...................... 
+
+[testcase2.img] Disk opened 
+[testcase2.img] File system found. fs_number: 0 
+[testcase2.img] Disk successfully mounted 
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+0            testcase2.img        3               0          emufs non-encrypted 
+
+[testcase2.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt    2048 	[2 6 7 8] 	Mon Oct 29 22:46:55 2018
+file2.txt    1536 	[3 4 5 -1] 	Mon Oct 29 22:46:55 2018
+-----------------------------------------------------------------
+
+File opened
+File opened
+
+<file1.txt> Current offset: 0. Reading 512 bytes 
+Data = [This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--------------------------------------END] 
+<file1.txt> Reading completed. Number of bytes read: 512. Current offset: 512 
+
+<file1.txt> Current offset: 512. Reading 1536 bytes 
+Data = [This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes-----Reached the end-----END] 
+<file1.txt> Reading completed. Number of bytes read: 1536. Current offset: 2048 
+
+<file2.txt> Current offset: 0. Reading 1536 bytes 
+Data = [This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes----This is a very large text consisting of 1536 bytes-----Reached the end-----END] 
+<file2.txt> Reading completed. Number of bytes read: 1536. Current offset: 1536 
+
+[testcase2.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt    2048 	[2 6 7 8] 	Mon Oct 29 22:46:55 2018
+file2.txt    1536 	[3 4 5 -1] 	Mon Oct 29 22:46:55 2018
+-----------------------------------------------------------------
+
+[testcase2.img] Device closed 
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+TESTCASE 3
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+[testcase3.img] Creating the disk image 
+[testcase3.img] Disk image is successfully creatd 
+[testcase3.img] Disk successfully mounted 
+File system created.
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+0            testcase3.img        3               0          emufs non-encrypted 
+
+[testcase3.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+-----------------------------------------------------------------
+
+File opened
+File opened
+
+<file1.txt> Current offset: 0. Writing 512 bytes 
+<file1.txt> Writing completed. Number of bytes wrtitten: 512. Current offset: 512 
+
+<file1.txt> Current offset: 512. Writing 1024 bytes 
+<file1.txt> Writing completed. Number of bytes wrtitten: 1024. Current offset: 1536 
+
+[testcase3.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt    1536 	[2 3 4 -1] 	Mon Oct 29 22:47:02 2018
+-----------------------------------------------------------------
+
+<file1.txt> Current offset: 0. Reading 512 bytes 
+Data = [This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--------------------------------------END] 
+<file1.txt> Reading completed. Number of bytes read: 512. Current offset: 512 
+
+<file1.txt> Current offset: 512. Reading 1024 bytes 
+Data = [This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---Reached the end of 1024 bytes--END] 
+<file1.txt> Reading completed. Number of bytes read: 1024. Current offset: 1536 
+
+[testcase3.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt    1536 	[2 3 4 -1] 	Mon Oct 29 22:47:02 2018
+-----------------------------------------------------------------
+[testcase3.img] Device closed 
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+TESTCASE 4
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+[testcase4.img] Disk opened 
+[testcase4.img] File system found. fs_number: 0 
+[testcase4.img] Disk successfully mounted 
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+0            testcase4.img        3               0          emufs non-encrypted 
+
+[testcase4.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt    1024 	[2 3 -1 -1] 	Mon Oct 29 22:06:21 2018
+-----------------------------------------------------------------
+
+File opened
+File opened
+File opened
+
+<file1.txt> Current offset: 0. Writing 512 bytes 
+<file1.txt> Writing completed. Number of bytes wrtitten: 512. Current offset: 512 
+
+<file1.txt> Current offset: 0. Writing 1024 bytes 
+<file1.txt> Writing completed. Number of bytes wrtitten: 1024. Current offset: 1024 
+
+[testcase4.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt    1024 	[2 3 -1 -1] 	Mon Oct 29 22:06:21 2018
+-----------------------------------------------------------------
+
+<file1.txt> Current offset: 0. Reading 1024 bytes 
+Data = [This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---Reached the end of 1024 bytes--END] 
+<file1.txt> Reading completed. Number of bytes read: 1024. Current offset: 1024 
+
+<file1.txt> Current offset: 1024. Reading 512 bytes 
+Error: Invalid offset
+Data = [] 
+<file1.txt> Reading completed. Number of bytes read: -1. Current offset: 1024 
+
+[testcase4.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt    1024 	[2 3 -1 -1] 	Mon Oct 29 22:06:21 2018
+-----------------------------------------------------------------
+
+[testcase4.img] Device closed 
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+TESTCASE 5
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+[testcase5.img] Disk opened 
+[testcase5.img] File system found. fs_number: 0 
+[testcase5.img] Disk successfully mounted 
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+0            testcase5.img        3               0          emufs non-encrypted 
+ 
+File opened
+File opened
+File opened
+
+[testcase5.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt     512 	[2 -1 -1 -1] 	Mon Oct 29 22:40:32 2018
+file2.txt    1024 	[3 4 -1 -1] 	Mon Oct 29 22:40:32 2018
+file3.txt     512 	[5 -1 -1 -1] 	Mon Oct 29 22:40:32 2018
+-----------------------------------------------------------------
+
+<file1.txt> Current offset: 0. Writing 512 bytes 
+<file1.txt> Writing completed. Number of bytes wrtitten: 512. Current offset: 512 
+
+<file2.txt> Current offset: 0. Writing 1024 bytes 
+<file2.txt> Writing completed. Number of bytes wrtitten: 1024. Current offset: 1024 
+
+[testcase5.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt     512 	[2 -1 -1 -1] 	Mon Oct 29 22:40:32 2018
+file2.txt    1024 	[3 4 -1 -1] 	Mon Oct 29 22:40:32 2018
+file3.txt     512 	[5 -1 -1 -1] 	Mon Oct 29 22:40:32 2018
+-----------------------------------------------------------------
+
+<file3.txt> Current offset: 0. Writing 1536 bytes 
+<file3.txt> Writing completed. Number of bytes wrtitten: 1536. Current offset: 1536 
+
+<file3.txt> Current offset: 1536. Writing 512 bytes 
+Error: Out of diskspace
+<file3.txt> Writing completed. Number of bytes wrtitten: -1. Current offset: 1536 
+
+[testcase5.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt     512 	[2 -1 -1 -1] 	Mon Oct 29 22:40:32 2018
+file2.txt    1024 	[3 4 -1 -1] 	Mon Oct 29 22:40:32 2018
+file3.txt     512 	[5 -1 -1 -1] 	Mon Oct 29 22:40:32 2018
+-----------------------------------------------------------------
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+0            testcase5.img        3               0          emufs non-encrypted 
+ 
+[testcase5.img] Device closed 
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+TESTCASE 6
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+[testcase6A.img] Disk opened 
+[testcase6A.img] File system found. fs_number: 0 
+[testcase6A.img] Disk successfully mounted 
+[testcase6B.img] Disk opened 
+[testcase6B.img] File system found. fs_number: 1 
+[testcase6B.img] Disk successfully mounted 
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+0            testcase6A.img       3               0          emufs non-encrypted 
+1            testcase6B.img       4               1          emufs encrypted     
+-----------------------------------------------------------------
+
+File opened
+File opened
+File opened
+
+[testcase6A.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt     512 	[2 -1 -1 -1] 	Mon Oct 29 22:23:39 2018
+file2.txt    1024 	[3 4 -1 -1] 	Mon Oct 29 22:23:39 2018
+
+[testcase6B.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file3.txt    1536 	[2 3 4 -1] 	Mon Oct 29 22:23:39 2018
+-----------------------------------------------------------------
+
+<file1.txt> Current offset: 0. Writing 512 bytes 
+<file1.txt> Writing completed. Number of bytes wrtitten: 512. Current offset: 512 
+
+<file2.txt> Current offset: 0. Writing 1024 bytes 
+<file2.txt> Writing completed. Number of bytes wrtitten: 1024. Current offset: 1024 
+
+[testcase6A.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt     512 	[2 -1 -1 -1] 	Mon Oct 29 22:23:39 2018
+file2.txt    1024 	[3 4 -1 -1] 	Mon Oct 29 22:23:39 2018
+
+[testcase6B.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file3.txt    1536 	[2 3 4 -1] 	Mon Oct 29 22:23:39 2018
+-----------------------------------------------------------------
+
+<file1.txt> Offset is set to 0 
+
+<file2.txt> Offset is set to 0 
+
+<file3.txt> Current offset: 0. Writing 512 bytes 
+<file3.txt> Writing completed. Number of bytes wrtitten: 512. Current offset: 512 
+
+<file3.txt> Current offset: 512. Writing 1024 bytes 
+<file3.txt> Writing completed. Number of bytes wrtitten: 1024. Current offset: 1536 
+
+<file3.txt> Offset is set to 0 
+
+<file3.txt> Current offset: 0. Reading 512 bytes 
+Data = [This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--This is a small text consisting 512 bytes--------------------------------------END] 
+<file3.txt> Reading completed. Number of bytes read: 512. Current offset: 512 
+
+<file3.txt> Current offset: 512. Reading 1024 bytes 
+Data = [This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---This is a large text consisting 1024 bytes---Reached the end of 1024 bytes--END] 
+<file3.txt> Reading completed. Number of bytes read: 1024. Current offset: 1536 
+
+[testcase6A.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file1.txt     512 	[2 -1 -1 -1] 	Mon Oct 29 22:23:39 2018
+file2.txt    1024 	[3 4 -1 -1] 	Mon Oct 29 22:23:39 2018
+
+[testcase6B.img] fsdump 
+  NAME       SIZE 	[BLOCKS] 	LAST MODIFIED
+file3.txt    1536 	[2 3 4 -1] 	Mon Oct 29 22:23:39 2018
+-----------------------------------------------------------------
+[testcase6A.img] Device closed 
+[testcase6B.img] Device closed 
+
+MOUNT-POINT  DEVICE-NAME          DEVICE-NUMBER   FS-NUMBER  FS-NAME              
+ 
